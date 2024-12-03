@@ -1,0 +1,24 @@
+pair<int, int> missingAndRepeating(vector<int> &arr, int n) {
+    unordered_set<int> s;
+    int r = -1;
+
+    // Find the repeating number and store all elements in a set
+    for (int num : arr) {
+        if (s.find(num) != s.end()) {
+            r = num;
+        } else {
+            s.insert(num);
+        }
+    }
+
+    // Find the missing number using the set
+    int m = -1;
+    for (int i = 1; i <= n; i++) {
+        if (s.find(i) == s.end()) {
+            m = i;
+            break;
+        }
+    }
+
+    return {m, r};
+}
