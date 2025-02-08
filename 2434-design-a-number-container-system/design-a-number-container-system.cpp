@@ -11,15 +11,18 @@ public:
     
 
    void change(int index, int number) {
-    if (in.count(index)) {           
-        int oldNumber = in[index];
-        ni[oldNumber].erase(index);
-        if (ni[oldNumber].empty()) {
+
+    if (in.count(index)) {      // 1,10      
+        int oldNumber = in[index]; // oldnumber= 10
+        ni[oldNumber].erase(index); // ni[10]=[2,3,5]
+        if (ni[oldNumber].empty()) { // ni[10]=[] => remove 10
             ni.erase(oldNumber);
         }
     }
-    in[index] = number;  // 2-> 10  1->10 3->10 5->10
-    ni[number].insert(index); // 10->2,1,3,5
+
+
+    in[index] = number;  // 2-> 10  1->10 3->10 5->10 // 1->20
+    ni[number].insert(index); // 10->2,1,3,5 // 20->1
 }
 
     
