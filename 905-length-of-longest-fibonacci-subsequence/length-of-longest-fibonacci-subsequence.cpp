@@ -17,12 +17,14 @@ public:
         for(int i=0;i<arr.size();i++)
         {
             mp[arr[i]]=i;
+            // mp = { 1:0, 2:1, 3:2, 4:3, 5:4, 6:5, 7:6, 8:7 }
         }
         int ans=0;
         for(int i=0;i<n-ans+1;i++)
         {
             for(int j=i+1;j<n-ans+1;j++)
             {
+    //  outer loop iterates over the first element i, and the inner loop picks a second element j
                 int mx=2+solve(arr,i,j);
                 ans=max(ans,mx);
             }
