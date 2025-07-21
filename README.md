@@ -1,6 +1,4 @@
-Here’s a polished and structured **README.md** draft tailored for your repository:
 
----
 
 # 🧠 DSA\_Problems
 
