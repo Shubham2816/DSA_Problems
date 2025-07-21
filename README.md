@@ -87,9 +87,7 @@ This collection is a personal practice project showcasing implementations of cor
 * Add unit tests for each solution
 * Possibly support multiple languages (Python, C++)
 
----
 
-Feel free to tweak any sections or add more details (e.g. dependencies, input format). Let me know if you’d like help customizing further!
 
 [1]: https://github.com/MakeContributions/DSA/blob/main/README.md?utm_source=chatgpt.com "DSA/README.md at main · MakeContributions/DSA"
 [2]: https://github.com/ShubhamDambale/Dsa_Algorithm?utm_source=chatgpt.com "Data Structures and Algorithms Practice"
