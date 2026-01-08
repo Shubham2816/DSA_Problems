@@ -14,20 +14,23 @@ public:
 class Solution {
   public:
   
-    int sol=INT_MIN;
-    int how(Node*root)
-    {
-        if(!root)return 0;
-        
-        int l=max(0,how(root->left));  int r=max(0,how(root->right));
-        sol=max(sol,root->data+l+r);
-        return root->data+max(l,r);
-    }
+  int sum=INT_MIN;
+  
+  int solve(Node *root)
+  {
+      if(!root) return 0;
+      
+      int l= max(0, solve(root->left));
+       int r= max(0, solve(root->right));
+       
+       sum=max(sum,l+r+root->data);
+       
+       return root->data+max(l,r);
+  }
   
     int findMaxSum(Node *root) {
         // code here
-        //  sol=INT_MIN;
-        how(root);
-        return sol;
+        solve(root);
+        return sum;
     }
 };
